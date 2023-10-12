@@ -1,0 +1,94 @@
+package main, romannumeral
+
+import ( "fmt",
+         "bytes"
+         "errors")
+
+func main () { 
+        var a, b float 64
+        var operator string
+        
+        fmt.Print(“Введите первое число: ”)
+        fmt.Scanln(&a)
+       
+        fmt.Print(“Введите второе число: ”)
+        fmt.Scanln(&b)
+    if a , b float 64 && a <= 10 && b<= 10 { 
+      // проверяем тип a, b. если введены числа меньше 10, то проводим вычисления
+              
+        fmt.Print(“Введите операцию(“+, - , /, *”): ”)
+        fmt.Scanln(&operator)          
+
+        switch operator {
+         
+         case “+” :
+                   fmt.Printf(“%f %s %f = %f”, a, operator, b, a + b )
+          
+         case “-”:
+                    fmt.Printf(“%f %s %f = %f”, a, operator, b, a - b ) 
+    
+        case “*”:
+                    fmt.Printf(“%f %s %f = %f”, a, operator, b, a * b )
+       
+        case “/”:
+                   if b == 0.0 {
+                         fmt.Println (“Делить на ноль нельзя”)
+                    }else{ 
+                           fmt.Printf(“%f %s %f = %f”, a, operator, b, a / b )
+              }
+        default:
+             fmt.Println (“Неверное значение”)
+        }
+    } else if a, b byte { 
+           func romanToInt(input []byte) (int, bool) {
+           // если тип a,b байты, то включаем функцию перевода римских чисел в целые и потом проводим операции с числами
+	         var output int
+	         for _, rom := range _numerals {
+		       for bytes.HasPrefix(input, rom.sym) {
+		       output += rom.val
+		       input = input[len(rom.sym):]
+		     }
+	     }
+	        return output, len(input) == 0
+          func main () {
+           // перевод римских цифр в целые числа
+          x, y := romanToInt(a, b) {
+          
+          var x, y float 64
+          var operator string
+        
+          fmt.Print(“Введите первое число: ”)
+          fmt.Scanln(&x)
+       
+          fmt.Print(“Введите второе число: ”)
+          fmt.Scanln(&y)
+        
+          if x <= 10 && y <= 10 {       
+              
+             fmt.Print(“Введите операцию(“+, - , /, *”): ”)
+             fmt.Scanln(&operator)          
+
+             switch operator {
+         
+             case “+” :
+                   fmt.Printf(“%f %s %f = %f”, x, operator, y, x + y )
+          
+             case “-”:
+                    fmt.Printf(“%f %s %f = %f”, x, operator, y, x - y ) 
+    
+             case “*”:
+                    fmt.Printf(“%f %s %f = %f”, x, operator, y, x * y )
+       
+             case “/”:
+                   if y == 0.0 {
+                         fmt.Println (“Делить на ноль нельзя”)
+                    }else{ 
+                           fmt.Printf(“%f %s %f = %f”, x, operator, y, x/ y )
+               }
+          }else{ 
+              fmt.Println (“Неверное значение”)
+        }
+    } else {
+    \\ если введено целое число и байт, то результатом будет “Ошибка”
+     fmt.Println(“Ошибка")
+}
